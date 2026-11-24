@@ -1,0 +1,166 @@
+.wc-cptbot-jump {
+  display: flex;
+  animation-duration: 1.5s;
+  animation-name: jump;
+  animation-iteration-count: infinite;
+  font-weight: 700;
+  animation-delay: .1s;
+}
+.wc-cptbot-jump-setting {
+  display: inline-block;
+  animation-duration: 1.5s;
+  animation-name: jump;
+  animation-iteration-count: infinite;
+  font-weight: 700;
+  animation-delay: .1s;
+}
+@keyframes jump {
+  0%, 100% {
+    transform: scale(1.1,1) translateY(0);
+  }
+
+  5% {
+    transform: scale(1,1) translateY(-.4em);
+  }
+
+  15% {
+    transform: scale(1.1,.9) translateY(-.5em);
+  }
+
+  25% {
+    transform: scale(1,1) translateY(-.4em);
+  }
+
+  30% {
+    transform: scale(1,1) translateY(0);
+  }
+}
+
+.wc-cptbot-bottom-to-top-right{
+  -webkit-animation: scale-up-right 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-right 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-name: scale-up-right;
+}
+.wc-cptbot-bottom-to-top-left{
+  -webkit-animation: scale-up-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-name: scale-up-left;
+}
+
+.wc-cptbot-top-to-bottom-right{
+  -webkit-animation: scale-down-right 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-down-right 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-name: scale-down-right;
+}
+.wc-cptbot-top-to-bottom-left{
+  -webkit-animation: scale-down-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-down-left 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation-name: scale-down-left;
+}
+
+.lds-dual-ring {
+  display: none;
+  width: 50px;
+  height: 30px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cptbot-loader:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1s linear infinite;
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-up-br
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+}
+
+@-webkit-keyframes scale-down-right {
+  0% {
+    -webkit-transform: scale(1);
+      transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+      transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation scale-up-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-up-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+
+@-webkit-keyframes scale-down-left {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+

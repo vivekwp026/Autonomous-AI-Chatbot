@@ -1,0 +1,76 @@
+.wc-cptbot-jump {
+  display: flex;
+  animation-duration: 1.5s;
+  animation-name: jump;
+  animation-iteration-count: infinite;
+  font-weight: 700;
+  animation-delay: .1s;
+}
+.wc-cptbot-jump-setting {
+  display: inline-block;
+  animation-duration: 1.5s;
+  animation-name: jump;
+  animation-iteration-count: infinite;
+  font-weight: 700;
+  animation-delay: .1s;
+}
+@keyframes jump {
+  0%, 100% {
+    transform: scale(1.1,1) translateY(0);
+  }
+
+  5% {
+    transform: scale(1,1) translateY(-.4em);
+  }
+
+  15% {
+    transform: scale(1.1,.9) translateY(-.5em);
+  }
+
+  25% {
+    transform: scale(1,1) translateY(-.4em);
+  }
+
+  30% {
+    transform: scale(1,1) translateY(0);
+  }
+}
+
+.wc-cptbot-bottom-to-top{
+  animation-duration: 1.5s;
+  animation-name: toTop;
+}
+@keyframes toTop {
+  0% {
+    bottom: -640px;
+  }
+  100% {
+    bottom: 95px ;
+  }
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/js/admin/dashboard/MetricCard.js:117
+#: src/js/admin/dashboard/dashboard.js:315
+msgid "PRO Feature"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:237
+msgid "User Traffic"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:244
+msgid "Week"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:244
+msgid "Month"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:253
+msgid "User Messages"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:253
+msgid "AI Messages"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:276
+msgid "Today's User Chat"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:282
+msgid "Email"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:283
+msgid "Message Count"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:296
+msgid "Total"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:301
+msgid "Chat not found"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:309
+msgid "Most Asked Products"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:367
+msgid "No product inquiries recorded yet"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:368
+msgid "Top products asked about in customer chats will appear here."
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:43
+msgid "Total Conversations"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:44
+msgid "No activity in either period"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:44
+msgid "Total Messages"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:45
+msgid "Active Users Today"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:45
+msgid "No users active today"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:46
+msgid "AI Resolution Rate"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:46
+msgid "Awaiting queries in period"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:47
+msgid "Knowledge Synced"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:47
+msgid "0 total items indexed"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:48
+msgid "Bot Cart Additions"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:48
+msgid "No cart activity yet"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:49
+msgid "Revenue from Bot"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:49
+msgid "No activity in this period"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:50
+msgid "Top Queried Product"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:50
+msgid "No product inquiries yet"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:51
+msgid "Available with PRO Addon"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:51
+msgid "Active Coupons"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:51
+msgid "Ready for bot redemption"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:52
+msgid "Avg AI Latency"
+msgstr ""
+
+#: src/js/admin/dashboard/dashboard.js:52
+msgid "Average response time"
+msgstr ""
+
+#: src/js/admin/model/model.js:20
+msgid "Upload Model"
+msgstr ""

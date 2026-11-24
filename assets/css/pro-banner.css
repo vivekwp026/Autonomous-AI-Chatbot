@@ -1,0 +1,1048 @@
+/**
+ * Upgrade to PRO Banner Styles
+ *
+ * @package AI Chatbot
+ */
+
+.wcaichatbot-pro-banner-card {
+    border: 2px dashed #60a5fa;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.07);
+}
+
+.wcaichatbot-pro-banner-card .wcaichatbot-pro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.wcaichatbot-pro-banner-card h3 {
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.wcaichatbot-pro-banner-card p {
+    margin: 0 auto 18px auto;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 580px;
+}
+
+.wcaichatbot-pro-banner-card .wcaichatbot-pro-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #1d4ed8;
+    padding: 8px 22px;
+    font-size: 13.5px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.wcaichatbot-pro-banner-card .wcaichatbot-pro-btn:hover {
+    background: #1d4ed8;
+    border-color: #1e40af;
+    color: #ffffff;
+}
+
+/* Compact variant for dashboard widgets */
+.wcaichatbot-pro-banner-card.wcaichatbot-pro-compact {
+    margin: 10px;
+    padding: 24px 16px;
+}
+
+.wcaichatbot-pro-banner-card.wcaichatbot-pro-compact h3 {
+    font-size: 15px;
+    margin: 6px 0 8px 0;
+}
+
+.wcaichatbot-pro-banner-card.wcaichatbot-pro-compact p {
+    font-size: 13px;
+    margin: 0 auto 14px auto;
+}
+
+.wcaichatbot-pro-banner-card.wcaichatbot-pro-compact .wcaichatbot-pro-btn {
+    font-size: 12px;
+    padding: 6px 16px;
+}
+
+/* Settings block variant */
+.wc-pos-form-block-body .wcaichatbot-pro-banner-card {
+    margin: 0 0 10px 0;
+}
+
+/* Golden Crown Icon for PRO features */
+.wcaichatbot-crown-icon {
+    display: inline-block;
+    margin-left: 6px;
+    width: 16px;
+    height: 13px;
+    vertical-align: -1px;
+    line-height: 1;
+}
+
+/* Pro Lock Reflection and Overlay Component (matching salesforce-connector) */
+.wcaichatbot-pro-lock {
+    position: relative;
+    border-radius: 0;
+    min-height: 120px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    container-type: inline-size;
+}
+
+.wcaichatbot-pro-lock__preview {
+    filter: grayscale(0.55);
+    opacity: 0.45;
+    pointer-events: none;
+    user-select: none;
+    padding: 20px;
+}
+
+.wcaichatbot-pro-lock__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 28px 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.45) 30%, rgba(255, 255, 255, 0.88) 65%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* Full height variant for full-page screens like Training */
+.wcaichatbot-pro-lock.is-full-height {
+    min-height: 540px;
+    border-radius: 12px;
+}
+
+.wcaichatbot-pro-lock.is-full-height .wcaichatbot-pro-lock__preview {
+    min-height: 540px;
+    padding: 24px;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 32%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0.05) 88%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 32%, rgba(0, 0, 0, 0.3) 65%, rgba(0, 0, 0, 0.05) 88%, rgba(0, 0, 0, 0) 100%);
+}
+
+.wcaichatbot-pro-lock.is-full-height .wcaichatbot-pro-lock__overlay {
+    padding: 50px 20px 24px;
+}
+
+/* When there is no preview, collapse and render statically without extra height */
+.wcaichatbot-pro-lock:not(:has(.wcaichatbot-pro-lock__preview)),
+.wcaichatbot-pro-lock.no-preview {
+    min-height: 0;
+    border: none;
+    background: transparent;
+    overflow: visible;
+}
+
+.wcaichatbot-pro-lock:not(:has(.wcaichatbot-pro-lock__preview)) .wcaichatbot-pro-lock__overlay,
+.wcaichatbot-pro-lock.no-preview .wcaichatbot-pro-lock__overlay {
+    position: static;
+    padding: 0;
+    background: none;
+    display: block;
+}
+
+/* Form Settings Blocks (e.g. Stripe MCP In-Chat Checkout) - strictly natural height, no extra border */
+.wc-pos-form-block-body .wcaichatbot-pro-lock {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.wc-pos-form-block-body .wcaichatbot-pro-lock .wcaichatbot-pro-lock__preview {
+    min-height: 0;
+    padding: 8px 2px 14px 2px;
+    filter: grayscale(0.6);
+    opacity: 0.42;
+    pointer-events: none;
+    user-select: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.wc-pos-form-block-body .wcaichatbot-pro-lock .wcaichatbot-pro-lock__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(0.5px);
+}
+
+.wc-pos-form-block-body .wcaichatbot-pro-lock:not(:has(.wcaichatbot-pro-lock__preview)) .wcaichatbot-pro-lock__overlay,
+.wc-pos-form-block-body .wcaichatbot-pro-lock.no-preview .wcaichatbot-pro-lock__overlay {
+    position: static;
+    padding: 0;
+    background: none;
+    display: block;
+}
+
+.wc-pos-form-block-body .wcaichatbot-pro-lock .wcaichatbot-pro-lock__card {
+    max-width: 640px;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Dashboard "Most Asked Products" Widget Lock Reflection - no extra border */
+.wc-cptbot-charts-body .wcaichatbot-pro-lock,
+.wc-cptbot-charts-mini-container .wcaichatbot-pro-lock {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+.wc-cptbot-charts-body .wcaichatbot-pro-lock .wcaichatbot-pro-lock__preview,
+.wc-cptbot-charts-mini-container .wcaichatbot-pro-lock .wcaichatbot-pro-lock__preview {
+    min-height: 240px;
+    height: 240px;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+.wc-cptbot-charts-body .wcaichatbot-pro-lock .wcaichatbot-pro-lock__overlay,
+.wc-cptbot-charts-mini-container .wcaichatbot-pro-lock .wcaichatbot-pro-lock__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.wc-cptbot-charts-body .wcaichatbot-pro-lock .wcaichatbot-pro-lock__card,
+.wc-cptbot-charts-mini-container .wcaichatbot-pro-lock .wcaichatbot-pro-lock__card {
+    max-width: 580px;
+    width: 100%;
+}
+
+.wcaichatbot-pro-lock__card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 660px;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.wcaichatbot-pro-lock__card > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.wcaichatbot-pro-lock__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    flex-shrink: 0;
+}
+
+.wcaichatbot-pro-lock__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wcaichatbot-pro-lock__desc {
+    margin: 3px 0 0 0;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.wcaichatbot-pro-badge-pill {
+    display: inline-block;
+    padding: 2px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #0284c7;
+    border-radius: 4px;
+    line-height: 1.2;
+}
+
+.wcaichatbot-pro-lock__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #94a3b8;
+    padding: 7px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+}
+
+.wcaichatbot-pro-lock__btn:hover {
+    background: #f8fafc;
+    border-color: #64748b;
+    color: #0f172a;
+}
+
+.wcaichatbot-pro-lock__btn.is-primary {
+    background: #2563eb;
+    border-color: #1d4ed8;
+    color: #ffffff;
+}
+
+.wcaichatbot-pro-lock__btn.is-primary:hover {
+    background: #1d4ed8;
+    border-color: #1e40af;
+    color: #ffffff;
+}
+
+/* Compact variant for dashboard widgets or inline items */
+.wcaichatbot-pro-lock.is-compact {
+    min-height: 240px;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__preview {
+    min-height: 240px;
+    height: 240px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-mask-image: none;
+    mask-image: none;
+    opacity: 0.55;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__preview svg {
+    max-width: 100%;
+    height: 200px;
+    max-height: 200px;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.35);
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 12px 18px;
+    gap: 14px;
+    max-width: 620px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__card > div {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    width: auto;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    margin: 0;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    text-align: left;
+    line-height: 1.3;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__desc {
+    font-size: 11.5px;
+    line-height: 1.45;
+    margin: 3px 0 0 0;
+    text-align: left;
+    color: #475569;
+    max-width: none;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__btn {
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 7px 16px;
+    margin-top: 0;
+    width: auto;
+    max-width: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+}
+.wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__btn:hover {
+    background: #f8fafc;
+    border-color: #64748b;
+    color: #0f172a;
+}
+
+@container (max-width: 390px) {
+    .wcaichatbot-pro-lock__card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 14px 12px !important;
+        gap: 10px !important;
+        box-sizing: border-box !important;
+        max-width: calc(100% - 16px) !important;
+    }
+
+    .wcaichatbot-pro-lock__card > div {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .wcaichatbot-pro-lock__title {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .wcaichatbot-pro-lock__desc {
+        text-align: center !important;
+        margin: 4px auto 0 auto !important;
+        font-size: 12px !important;
+        line-height: 1.42 !important;
+    }
+
+    .wcaichatbot-pro-lock__btn {
+        margin-top: 4px !important;
+        width: auto !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Ghost Table Styling for Locked Previews */
+.wcaichatbot-ghost-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wcaichatbot-ghost-table th,
+.wcaichatbot-ghost-table td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 13px;
+    color: #475569;
+}
+
+.wcaichatbot-ghost-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.wcaichatbot-ghost-pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.nav-tab .wcaichatbot-crown-icon {
+    vertical-align: -2px;
+}
+
+/* Main Header Layout Alignment */
+.wc-cptbot-main-header-wrapper {
+    /* gap: 12px !important; */
+}
+
+.wc-cptbot-main-header {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+/* Edition Badges (Lite / Pro) for Main Heading */
+.wcaichatbot-edition-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 9999px;
+    margin-left: 10px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.wcaichatbot-edition-badge.wcaichatbot-badge-lite {
+    background-color: #c7e4fc;
+    color: #094fa9;
+    border: 1px solid #b6dbfa;
+}
+
+.wcaichatbot-edition-badge.wcaichatbot-badge-pro {
+    background-color: #fbca5b;
+    color: #180b7b;
+    border: 1px solid #f2be48;
+}
+
+/* ==========================================================================
+   Webkul Marketing & Cross-Selling Plugin Advertisements Banner
+   ========================================================================== */
+.wc-cptbot-main-header-wrapper {
+    flex-wrap: wrap !important;
+}
+
+hr.wp-header-end {
+    display: none !important;
+}
+
+.wc-cptbot-plugin-adds-wrap,
+.wkwcpos-plugin-adds-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    clear: both !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-left: 5px solid #2b57e7 !important;
+    border-radius: 4px !important;
+    padding: 18px 36px 18px 20px !important;
+    margin: 0 0 24px 0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    font-family: inherit !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-recommend-badge,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-recommend-badge {
+    position: absolute !important;
+    top: 0 !important;
+    left: 16px !important;
+    border-radius: 0 0 6px 6px !important;
+    background-color: #2b57e7 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 3.5px 12px !important;
+    font-size: 11.5px !important;
+    line-height: 1.3 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 2px 5px rgba(43, 87, 231, 0.25) !important;
+    z-index: 2 !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-logo,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-logo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 82px !important;
+    width: 82px !important;
+    margin: 18px 0 0 0 !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-logo img,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-logo img {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 6px !important;
+    object-fit: contain !important;
+    display: block !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-title,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-title {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #111827 !important;
+    margin: 12px 0 2px 0 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.2px !important;
+    display: block !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-description,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-description {
+    font-size: 14px !important;
+    color: #374151 !important;
+    line-height: 1.55 !important;
+    margin: 0 0 12px 0 !important;
+    font-weight: 400 !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-description strong,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-description strong {
+    color: #b45309 !important;
+    font-weight: 700 !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    flex-wrap: wrap !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button,
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button.button-primary,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links a.button,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links a.button.button-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #2b57e7 !important;
+    border: 1px solid #2b57e7 !important;
+    color: #ffffff !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    padding: 8px 18px !important;
+    height: auto !important;
+    min-height: 38px !important;
+    line-height: 1.4 !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 1px 2px rgba(43, 87, 231, 0.15) !important;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button:hover,
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button.button-primary:hover,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links a.button:hover,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links a.button.button-primary:hover {
+    background-color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button:active,
+.wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button.button-primary:active,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links a.button:active,
+.wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content .wkwcpos-plugin-links a.button.button-primary:active {
+    transform: translateY(1px) !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .notice-dismiss,
+.wc-cptbot-plugin-adds-wrap button.notice-dismiss,
+.wkwcpos-plugin-adds-wrap .notice-dismiss,
+.wkwcpos-plugin-adds-wrap button.notice-dismiss {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    margin: 0 !important;
+    padding: 9px !important;
+    color: #64748b !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease, background 0.15s ease !important;
+    border-radius: 4px !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .notice-dismiss::before,
+.wc-cptbot-plugin-adds-wrap button.notice-dismiss::before,
+.wkwcpos-plugin-adds-wrap .notice-dismiss::before,
+.wkwcpos-plugin-adds-wrap button.notice-dismiss::before {
+    font-size: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    display: inline-block !important;
+}
+
+.wc-cptbot-plugin-adds-wrap .notice-dismiss:hover,
+.wc-cptbot-plugin-adds-wrap button.notice-dismiss:hover,
+.wkwcpos-plugin-adds-wrap .notice-dismiss:hover,
+.wkwcpos-plugin-adds-wrap button.notice-dismiss:hover {
+    color: #0f172a !important;
+    background: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Tablet (max-width: 782px) */
+@media (max-width: 782px) {
+    .wc-cptbot-plugin-adds-wrap,
+    .wkwcpos-plugin-adds-wrap {
+        padding: 16px 30px 16px 16px !important;
+        gap: 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-logo,
+    .wkwcpos-plugin-adds-wrap .wkwcpos-plugin-logo {
+        flex: 0 0 70px !important;
+        width: 70px !important;
+        margin-top: 14px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-logo img,
+    .wkwcpos-plugin-adds-wrap .wkwcpos-plugin-logo img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-title,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-title {
+        font-size: 18px !important;
+        margin-top: 8px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-description,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-description {
+        font-size: 13.5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-links {
+        gap: 10px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button,
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button.button-primary,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-links a.button,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-links a.button.button-primary {
+        font-size: 13px !important;
+        padding: 7px 16px !important;
+        min-height: 36px !important;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .wc-cptbot-plugin-adds-wrap,
+    .wkwcpos-plugin-adds-wrap {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 22px 14px 16px 14px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-recommend-badge,
+    .wkwcpos-plugin-adds-wrap .wkwcpos-plugin-recommend-badge {
+        left: 12px !important;
+        font-size: 11px !important;
+        padding: 3px 10px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-logo,
+    .wkwcpos-plugin-adds-wrap .wkwcpos-plugin-logo {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        margin: 6px 0 0 0 !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-logo img,
+    .wkwcpos-plugin-adds-wrap .wkwcpos-plugin-logo img {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content,
+    .wkwcpos-plugin-adds-wrap .wkwcpos-plugin-content {
+        width: 100% !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-title,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-title {
+        font-size: 17px !important;
+        margin-top: 4px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-description,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-description {
+        font-size: 13px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-links {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 8px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button,
+    .wc-cptbot-plugin-adds-wrap .wc-cptbot-plugin-content .wc-cptbot-plugin-links a.button.button-primary,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-links a.button,
+    .wkwcpos-plugin-adds-wrap .wc-cptbot-plugin-content .wkwcpos-plugin-links a.button.button-primary {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 9px 16px !important;
+        font-size: 13.5px !important;
+    }
+
+    .wc-cptbot-plugin-adds-wrap .notice-dismiss,
+    .wc-cptbot-plugin-adds-wrap button.notice-dismiss,
+    .wkwcpos-plugin-adds-wrap .notice-dismiss,
+    .wkwcpos-plugin-adds-wrap button.notice-dismiss {
+        top: 4px !important;
+        right: 4px !important;
+        padding: 6px !important;
+    }
+}
+
+/* ==========================================================================
+   Responsive adjustments for Pro Lock Banner and Cards on small screens
+   ========================================================================== */
+@media (max-width: 782px) {
+    .wcaichatbot-pro-lock__card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 16px 14px !important;
+        gap: 10px !important;
+        max-width: calc(100% - 20px) !important;
+        box-sizing: border-box !important;
+    }
+
+    .wcaichatbot-pro-lock__card > div {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .wcaichatbot-pro-lock__title {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .wcaichatbot-pro-lock__desc {
+        text-align: center !important;
+        margin: 6px auto 0 auto !important;
+        font-size: 12.5px !important;
+        line-height: 1.45 !important;
+        max-width: 100% !important;
+    }
+
+    .wcaichatbot-pro-lock__btn {
+        width: auto !important;
+        max-width: 240px !important;
+        margin-top: 4px !important;
+        padding: 8px 18px !important;
+        font-size: 13px !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .wcaichatbot-pro-lock__overlay {
+        padding: 14px 10px !important;
+    }
+
+    .wcaichatbot-pro-banner-card {
+        padding: 20px 14px !important;
+        margin: 14px 0 !important;
+    }
+
+    .wcaichatbot-pro-banner-card h3 {
+        font-size: 16px !important;
+    }
+
+    .wcaichatbot-pro-banner-card p {
+        font-size: 13px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .wcaichatbot-pro-banner-card .wcaichatbot-pro-btn {
+        width: 100% !important;
+        max-width: 240px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+        padding: 8px 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .wcaichatbot-pro-lock__card {
+        padding: 12px 10px !important;
+        gap: 8px !important;
+        max-width: calc(100% - 12px) !important;
+    }
+
+    .wcaichatbot-pro-lock__icon {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .wcaichatbot-pro-lock__icon svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .wcaichatbot-pro-lock__title {
+        font-size: 12.5px !important;
+    }
+
+    .wcaichatbot-pro-lock__desc {
+        font-size: 11.5px !important;
+        line-height: 1.4 !important;
+    }
+
+    .wcaichatbot-pro-lock__btn {
+        font-size: 12px !important;
+        padding: 6px 14px !important;
+        width: auto !important;
+        max-width: 210px !important;
+    }
+
+    .wcaichatbot-pro-lock__overlay {
+        padding: 8px !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact {
+        min-height: 150px !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 12px 10px !important;
+        gap: 8px !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__card > div {
+        text-align: center !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__title {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__desc {
+        text-align: center !important;
+        margin: 4px auto 0 auto !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__btn {
+        margin-top: 4px !important;
+    }
+
+    .wcaichatbot-pro-lock.is-compact .wcaichatbot-pro-lock__preview {
+        min-height: 140px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .wcaichatbot-pro-lock__card {
+        padding: 10px 8px !important;
+        gap: 6px !important;
+    }
+
+    .wcaichatbot-pro-lock__title {
+        font-size: 12px !important;
+    }
+
+    .wcaichatbot-pro-lock__desc {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+    }
+
+    .wcaichatbot-pro-lock__btn {
+        font-size: 11.5px !important;
+        padding: 5px 12px !important;
+    }
+}
+
