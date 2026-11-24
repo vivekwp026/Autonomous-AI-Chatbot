@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Webkul Support Ticket
+    url: https://webkul.com/ticket/
+    about: For questions, setup assistance, or commercial support, please open a ticket on Webkul Support.
+  - name: Report a security vulnerability
+    url: https://github.com/advisories/new
+    about: Please report security issues privately, as described in README.md.
+

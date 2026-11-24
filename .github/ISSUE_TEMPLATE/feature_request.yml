@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement or a new feature for Autonomous AI Chatbot.
+labels: [ "enhancement" ]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe your use case, not only the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you envision this feature working.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you have considered
+      description: Any other tools, workarounds, or approaches you have explored.
+

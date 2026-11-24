@@ -1,0 +1,53 @@
+name: Bug report
+description: Something does not work as expected in Autonomous AI Chatbot.
+labels: [ "bug" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. **Security issues must not be reported here**; see README.md.
+        **Important:** Please redact any private API keys (such as OpenAI keys, Pinecone API keys), customer data, or sensitive credentials before submitting.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to Autonomous AI Chatbot → Data Training...
+        2. Sync products with...
+        3. Open frontend chatbot and ask...
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Error message or logs
+      description: The relevant browser console error, PHP error log, or chatbot API response (redacted).
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      value: |
+        - WordPress version:
+        - WooCommerce version:
+        - PHP version:
+        - HPOS enabled (yes/no):
+        - AI Model (e.g., gpt-4o, gpt-3.5-turbo):
+        - Embedding Engine (e.g., Local ONNX, Pinecone, ChromaDB, Gemini):
+        - Browser & OS:
+    validations:
+      required: true
+
