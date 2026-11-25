@@ -6,5 +6,5 @@
 		'wp-element',
 		'wp-hooks'
 	),
-	'version' => '9395303b11eaf86391ce'
+	'version' => '3e33ebffa4ff4ca86624'
 );
